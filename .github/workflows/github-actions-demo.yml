@@ -9,3 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 job.py
+      - run: echo "Hello depuis la pipeline $(date)" > output.txt
+      - run: cat output.txt
